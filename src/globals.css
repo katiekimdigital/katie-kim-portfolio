@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Kalam:wght@300;400;700&family=Special+Elite&family=Syne:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-mascarpone: #F2EAD8;
+  --bg-cream: #E8D9BE;
+  --bg-polaroid: #F5EFE0;
+  --coffee-mid: #C4A882;
+  --ink-body: #5C3D1E;
+  --ink-faded: #7A5230;
+  --espresso: #2A1608;
+  --ivory: #F0E6CC;
+  --matcha-mist: #EBF2E8;
+  --matcha-mid: #4A7C59;
+  --matcha-light: #8DB87A;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --dur-curtain: 600ms;
+  --dur-panel: 300ms;
+  --dur-panel-out: 150ms;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+@keyframes curtainOut {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
+}
+
+@keyframes curtainOutMobile {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-100%); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}

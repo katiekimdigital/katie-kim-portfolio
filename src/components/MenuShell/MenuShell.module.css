@@ -1,0 +1,28 @@
+.shell {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.content {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.fadeIn {
+  animation: fadeInUp var(--dur-panel) var(--ease-out) forwards;
+}
+
+.fadeOut {
+  animation: fadeOut var(--dur-panel-out) ease forwards;
+}
+
+@media (max-width: 900px) {
+  .content {
+    width: 100%;
+    height: calc(100% - 64px);
+  }
+}

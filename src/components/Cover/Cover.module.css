@@ -1,0 +1,168 @@
+.cover {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.left {
+  width: 50%;
+  height: 100%;
+  background: var(--espresso);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.left.curtainOut {
+  animation: curtainOut var(--dur-curtain) var(--ease-out) forwards;
+}
+
+.leftContent {
+  text-align: center;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.firstName,
+.lastName {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 80px;
+  color: var(--ivory);
+  line-height: 1;
+  display: block;
+}
+
+.tagline {
+  font-family: 'Special Elite', cursive;
+  font-size: 11px;
+  color: var(--coffee-mid);
+  letter-spacing: 3px;
+  margin-top: 20px;
+}
+
+.spine {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-1px);
+  width: 2px;
+  height: 100%;
+  background: var(--coffee-mid);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.right {
+  width: 50%;
+  height: 100%;
+  background: var(--bg-mascarpone);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.right.fadeIn {
+  animation: fadeInUp var(--dur-panel) var(--ease-out) forwards;
+}
+
+.rightContent {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.est {
+  font-family: 'Special Elite', cursive;
+  font-size: 13px;
+  color: var(--ink-faded);
+  letter-spacing: 1px;
+}
+
+.tap {
+  font-family: 'Kalam', cursive;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--ink-faded);
+}
+
+.openBtn {
+  font-family: 'Special Elite', cursive;
+  font-size: 13px;
+  color: var(--ink-body);
+  background: none;
+  border: 1px solid var(--coffee-mid);
+  padding: 10px 24px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background 200ms ease, color 200ms ease;
+}
+
+.openBtn:hover {
+  background: var(--espresso);
+  color: var(--ivory);
+}
+
+.cafeTag {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  font-family: 'Kalam', cursive;
+  font-size: 11px;
+  color: var(--coffee-mid);
+}
+
+/* Mobile: below 900px — spine horizontal, espresso top cream bottom, curtain slides up */
+@media (max-width: 900px) {
+  .cover {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+    height: 50%;
+  }
+
+  .left.curtainOut {
+    animation: curtainOutMobile var(--dur-curtain) var(--ease-out) forwards;
+  }
+
+  .spine {
+    left: 0;
+    top: 50%;
+    transform: translateY(-1px);
+    width: 100%;
+    height: 2px;
+  }
+
+  .right {
+    width: 100%;
+    height: 50%;
+  }
+
+  .firstName,
+  .lastName {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .firstName,
+  .lastName {
+    font-size: 48px;
+  }
+}
