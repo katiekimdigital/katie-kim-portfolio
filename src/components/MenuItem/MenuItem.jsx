@@ -1,0 +1,124 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--color-border, #e5dcc7);
+  cursor: pointer;
+  transition: transform 0.25s ease, padding 0.25s ease;
+  outline: none;
+}
+
+.item:hover,
+.item:focus-visible {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.item:focus-visible {
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nameRow {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  width: 100%;
+}
+
+.name {
+  font-family: var(--font-serif, "Fraunces", Georgia, serif);
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 400;
+  color: var(--color-ink, #1a1714);
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.leader {
+  flex: 1;
+  height: 1px;
+  background-image: radial-gradient(
+    circle,
+    var(--color-ink, #1a1714) 1px,
+    transparent 1.5px
+  );
+  background-size: 6px 2px;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  opacity: 0.35;
+  align-self: flex-end;
+  margin-bottom: 8px;
+}
+
+.tag {
+  font-family: var(--font-mono, "JetBrains Mono", monospace);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent, #c46b3f);
+  background: rgba(196, 107, 63, 0.08);
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.tagline {
+  font-family: var(--font-serif, "Fraunces", Georgia, serif);
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-ink-soft, #3a332c);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.description {
+  font-family: var(--font-sans, "Inter Tight", sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text-secondary, #6b6157);
+  margin: 0;
+  line-height: 1.6;
+  max-width: 640px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.meta {
+  font-family: var(--font-mono, "JetBrains Mono", monospace);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--color-text-tertiary, #9c9082);
+  letter-spacing: 0.02em;
+}
+
+.viewCta {
+  font-family: var(--font-mono, "JetBrains Mono", monospace);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink, #1a1714);
+  transition: color 0.2s ease;
+}
+
+.item:hover .viewCta,
+.item:focus-visible .viewCta {
+  color: var(--color-accent, #c46b3f);
+}
