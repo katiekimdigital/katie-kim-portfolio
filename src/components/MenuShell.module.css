@@ -1,84 +1,17 @@
 .shell {
-  --color-bg: #f4efe6;
-  --color-paper: #fbf8f1;
-  --color-ink: #1a1714;
-  --color-ink-soft: #3a332c;
-  --color-text-secondary: #6b6157;
-  --color-text-tertiary: #9c9082;
-  --color-border: #e5dcc7;
-  --color-accent: #c46b3f;
-  --font-serif: "Fraunces", Georgia, serif;
-  --font-sans: "Inter Tight", -apple-system, sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
-
+  display: grid;
+  grid-template-columns: 200px 1fr;
   min-height: 100vh;
-  background: var(--color-bg);
-  color: var(--color-ink);
-  padding: 64px 32px 32px;
-  font-family: var(--font-sans);
+  background: var(--cream, #EFE7D6);
 }
 
-.shellHeader {
-  max-width: 720px;
-  margin: 0 auto 56px;
-  text-align: left;
+.content {
+  padding: 80px 72px;
+  max-width: 1100px;
+  overflow-y: auto;
 }
 
-.eyebrow {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-accent);
-  margin-bottom: 16px;
-}
-
-.title {
-  font-family: var(--font-serif);
-  font-size: clamp(48px, 7vw, 80px);
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -0.035em;
-  margin: 0 0 20px 0;
-  color: var(--color-ink);
-}
-
-.title em {
-  font-style: italic;
-  color: var(--color-accent);
-}
-
-.subtitle {
-  font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--color-ink-soft);
-  margin: 0;
-  max-width: 560px;
-}
-
-.menuList {
-  max-width: 720px;
-  margin: 0 auto;
-  border-top: 1px solid var(--color-border);
-}
-
-.shellFooter {
-  max-width: 720px;
-  margin: 80px auto 0;
-  padding-top: 24px;
-  border-top: 1px solid var(--color-border);
-  display: flex;
-  justify-content: space-between;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--color-text-tertiary);
-  letter-spacing: 0.02em;
-}
-
-@media (max-width: 640px) {
-  .shell { padding: 48px 20px 24px; }
-  .shellHeader { margin-bottom: 40px; }
+@media (max-width: 768px) {
+  .shell { grid-template-columns: 1fr; }
+  .content { padding: 48px 24px; }
 }
