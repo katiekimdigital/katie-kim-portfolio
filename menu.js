@@ -1,0 +1,38 @@
+export const MENU_ITEMS = [
+  {
+    id: "relay",
+    name: "The Signature Blend",
+    tagline: "Agentic content ops — landing page",
+    description: "A fictional SaaS landing page for an AI agent platform. Built to demonstrate conversion architecture, brand systems, and the human-in-the-loop methodology I bring to client work.",
+    tag: "FEATURED",
+    meta: "Concept · 2026",
+    component: "RelayLanding",
+  },
+  {
+    id: "namisan",
+    name: "The Origin Story",
+    tagline: "How I directed AI to build a real brand",
+    description: "Methodology case study on Namisan Matcha — my self-initiated ceremonial matcha brand. Covers the direction, briefing, production, and curation framework.",
+    tag: "REAL BRAND",
+    meta: "Self-initiated · 2024–present",
+    component: "NamisanCaseStudy",
+  },
+  {
+    id: "nudge",
+    name: "The Audit",
+    tagline: "Behavioural UX scoring tool",
+    description: "Concept dashboard that scores websites against behavioural psychology principles. Shows how I think about the strategy behind design decisions.",
+    tag: "CONCEPT",
+    meta: "Concept · 2026",
+    component: "NudgeDashboard",
+  },
+  {
+    id: "flow",
+    name: "The Pour Over",
+    tagline: "AI-enhanced content workflow blueprint",
+    description: "Interactive before/after visualisation of a solo founder's content pipeline transformed into an automated system.",
+    tag: "CONCEPT",
+    meta: "Concept · 2026",
+    component: "FlowDashboard",
+  },
+];
