@@ -7,18 +7,15 @@ export default function Cover({ onOpen }) {
   const handleOpen = useCallback(() => {
     if (animating) return
     setAnimating(true)
-  }, [animating])
-
-  const handleAnimationEnd = useCallback(() => {
-    onOpen()
-  }, [onOpen])
+    // Fallback: call onOpen after 600ms regardless of animation event
+    setTimeout(() => {
+      onOpen()
+    }, 600)
+  }, [animating, onOpen])
 
   return (
     <div className={styles.cover} onClick={handleOpen} role="button" tabIndex={0}>
-      <div
-        className={`${styles.left} ${animating ? styles.curtainOut : ''}`}
-        onAnimationEnd={handleAnimationEnd}
-      >
+      <div className={`${styles.left} ${animating ? styles.curtainOut : ''}`}>
         <div className={styles.leftContent}>
           <h1 className={styles.name}>
             <span className={styles.firstName}>Katie</span>
