@@ -1,0 +1,56 @@
+.ctaBox {
+  margin-top: 64px;
+  padding: 32px 40px;
+  max-width: 900px;
+  background: var(--cream-light, #F7F1E3);
+  border: 1px solid var(--border, #D9CFB8);
+  border-left: 3px solid var(--matcha-deep, #3D5A2E);
+  border-radius: 2px;
+}
+
+.ctaLabel {
+  font-family: 'Special Elite', 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--matcha-deep, #3D5A2E);
+  margin: 0 0 12px 0;
+}
+
+.ctaBody {
+  font-family: Georgia, serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-soft, #3A322A);
+  margin: 0 0 24px 0;
+  max-width: 560px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.primaryLink {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--terracotta, #A65D3E);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  width: fit-content;
+}
+
+.primaryLink:hover { color: var(--matcha-deep, #3D5A2E); }
+
+.secondaryLink {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  color: var(--ink-soft, #3A322A);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  width: fit-content;
+}
+
+.secondaryLink:hover { color: var(--terracotta, #A65D3E); }
