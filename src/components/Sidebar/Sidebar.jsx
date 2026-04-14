@@ -2,9 +2,9 @@ import styles from './Sidebar.module.css'
 
 const TABS = [
   { id: 'about', label: 'About' },
-  { id: 'work', label: 'Work' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'beyond', label: 'Beyond' },
+  { id: 'work', label: 'Menu' },
+  { id: 'skills', label: 'Sides' },
+  { id: 'beyond', label: 'Extras' },
   { id: 'contact', label: 'Contact' },
 ]
 
