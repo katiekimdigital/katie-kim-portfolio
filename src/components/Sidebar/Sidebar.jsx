@@ -2,18 +2,23 @@ import styles from './Sidebar.module.css'
 
 const TABS = [
   { id: 'about', label: 'About' },
-  { id: 'work', label: 'Menu' },
-  { id: 'skills', label: 'Sides' },
-  { id: 'beyond', label: 'Extras' },
+  { id: 'work', label: 'Work' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'beyond', label: 'Beyond' },
   { id: 'contact', label: 'Contact' },
 ]
 
 export default function Sidebar({ activeTab, onTabChange }) {
   return (
     <nav className={styles.sidebar}>
-      <div className={styles.brand}>
+      <button
+        className={styles.brand}
+        onClick={() => onTabChange('about')}
+        aria-label="Go to About"
+      >
+        <span className={styles.coffeeIcon} aria-hidden="true">☕</span>
         <span className={styles.brandName}>KK</span>
-      </div>
+      </button>
       <ul className={styles.tabList}>
         {TABS.map((tab) => (
           <li key={tab.id}>
