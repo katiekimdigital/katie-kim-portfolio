@@ -23,12 +23,12 @@ export default function Sidebar({ activeTab, onTabChange }) {
         {TABS.map((tab) => (
           <li key={tab.id}>
             <button
-              className={`${styles.tab} ${styles[tab.id]} ${activeTab === tab.id ? styles.active : ''}`}
-              onClick={() => onTabChange(tab.id)}
-              aria-current={activeTab === tab.id ? 'page' : undefined}
-            >
-              {tab.label}
-            </button>
+  className={styles.brand}
+  onClick={() => onTabChange('about')}
+  aria-label="Go to About"
+>
+  <span className={styles.brandName}>KK</span>
+</button>
           </li>
         ))}
       </ul>
