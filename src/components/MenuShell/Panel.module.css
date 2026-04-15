@@ -49,12 +49,16 @@
 }
 
 .signature {
-  font-family: 'Kalam', cursive;
-  font-size: 28px;
+  font-family: 'Dancing Script', 'Kalam', cursive;
+  font-size: 56px;
+  font-weight: 600;
   color: var(--terracotta, #A65D3E);
   text-align: right;
   margin-top: 32px;
   max-width: 900px;
+  line-height: 1;
+  transform: rotate(-3deg);
+  transform-origin: right center;
 }
 
 .body {
