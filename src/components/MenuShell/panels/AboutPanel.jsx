@@ -7,7 +7,7 @@ export default function AboutPanel() {
       <h1 className={styles.title}>A Letter From the Self-Taught Barista</h1>
      <div className={styles.columns}>
   <p>
-    <span className={styles.dropCap}>W</span>elcome to the café. The menu changes with what I'm making — right now it's mostly case studies, four pieces showing how I think about design, systems, and the behaviour they shape.
+    <span className={styles.dropCap}>W</span>elcome to the Katie's Portfolio café. The menu changes with what I'm making — right now it's mostly case studies, four pieces showing how I think about design, systems, and the behaviour they shape.
   </p>
   <p>
     <em>Most people design how things look. I design how they think.</em> I'm Katie — a behaviour-science led creative technologist. I apply cognitive psychology to how people navigate, engage with, and respond to digital content — designing the systems, structures, and stories that shape what users do next. Not by chance, but by design.
