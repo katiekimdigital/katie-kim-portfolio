@@ -6,13 +6,13 @@ const INTERESTS = [
   { title: 'Cinematography', desc: 'Short films and visual studies on my YouTube channel, @katiekimushi. Mostly Tokyo kissaten and quiet rooms.' },
   { title: 'Japanese (N5)', desc: 'Studying JLPT vocabulary and grammar. Also conversational Vietnamese from family roots.' },
   { title: 'Behavioural reading', desc: 'Kahneman, Ariely, Thaler — anything where the science of thinking meets everyday design decisions.' },
-  { title: 'Home barista', desc: 'V60 and espresso. The café aesthetic isn\'t just theming — it\'s how I actually spend weekends.' },
+  { title: 'V60 & espresso', desc: 'Manual brewing as a ritual. The precision, the variables, the feedback loop — it\'s not so different from design iteration.' },
 ]
 
 export default function BeyondPanel() {
   return (
     <div className={styles.panel}>
-      <span className={styles.eyebrow}>— Off the Menu —</span>
+      <span className={styles.eyebrow}>— Off Hours —</span>
       <h1 className={styles.title}>Beyond</h1>
       <p className={styles.body}>
         The rest of the story. These are the things I do when I'm not at a screen — and often the reason the work on screen ends up the way it does.

@@ -15,8 +15,8 @@ import { useState, useEffect } from "react";
  *   Violet     = AI agents, execution, automation
  */
 const FONT = {
-  sans: "'Outfit', sans-serif",
-  mono: "'IBM Plex Mono', monospace",
+  sans: "'Barlow', system-ui, sans-serif",
+  mono: "'Fira Mono', 'Courier New', monospace",
 };
 
 const TYPE = {
@@ -195,10 +195,7 @@ const Hero = ({ on }) => (
         opacity: 0, animation: on ? "rlUp 0.7s ease forwards 0.2s" : "none",
       }}>
         Deploy AI agents.{" "}
-        <span style={{
-          background: `linear-gradient(135deg, ${P.amber}, ${P.violet})`,
-          WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
-        }}>Direct the strategy.</span>
+        <span style={{ color: P.amber }}>Direct the strategy.</span>
       </h1>
 
       <p style={{
@@ -559,7 +556,7 @@ const CtaBlock = () => (
     <div style={{ position: "relative", maxWidth: 540, margin: "0 auto" }}>
       <h2 style={{ ...s(TYPE.display), color: P.textPrimary, margin: `0 0 ${SP.lg}px 0` }}>
         Ready to direct your{" "}
-        <span style={{ background: `linear-gradient(135deg, ${P.amber}, ${P.violet})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>content team</span>?
+        <span style={{ color: P.amber }}>content team</span>?
       </h2>
       <p style={{ ...s(TYPE.body), color: P.textSecondary, margin: `0 0 ${SP.xxl}px 0` }}>
         Join 2,400+ content directors already using Relay. Free plan available — deploy your first agents in minutes.
@@ -595,7 +592,7 @@ export default function RelayLanding() {
   return (
     <div style={{ minHeight: "100vh", background: P.bgDeep, color: P.textPrimary, fontFamily: TYPE.body.family }}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Fira+Mono:wght@400;500;700&display=swap');
         @keyframes rlUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes rlFade { from { opacity: 0; } to { opacity: 1; } }
         html { scroll-behavior: smooth; }

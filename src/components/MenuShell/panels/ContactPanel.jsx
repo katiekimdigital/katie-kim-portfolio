@@ -11,10 +11,10 @@ const OFFERINGS = [
 export default function ContactPanel() {
   return (
     <div className={styles.panel}>
-      <span className={styles.eyebrow}>— Made to Order —</span>
-      <h1 className={styles.title}>Design a custom drink</h1>
+      <span className={styles.eyebrow}>— Enquiries —</span>
+      <h1 className={styles.title}>Work Together</h1>
       <p className={styles.body}>
-        The menu shows finished work, but most of what I do is made to order. Tell me what you need brewed — I take on a small number of engagements each quarter so I can give each one proper attention.
+        I take on a small number of engagements each quarter so I can give each one proper attention. Tell me what you're building — the goal, the timeline, and what success looks like to you.
       </p>
 
       <p className={styles.sectionLabel} style={{ marginTop: 48 }}>What's on offer</p>
@@ -36,8 +36,11 @@ export default function ContactPanel() {
           <a href="mailto:katiekimdigital@gmail.com" className={contactStyles.primaryLink}>
             katiekimdigital@gmail.com →
           </a>
-          <a href="https://contra.com" target="_blank" rel="noreferrer" className={contactStyles.secondaryLink}>
+          <a href="https://contra.com/katiekimdigital" target="_blank" rel="noreferrer" className={contactStyles.secondaryLink}>
             Contra profile →
+          </a>
+          <a href="https://linkedin.com/in/katiekimdigital" target="_blank" rel="noreferrer" className={contactStyles.secondaryLink}>
+            LinkedIn →
           </a>
           <a href="https://youtube.com/@katiekimushi" target="_blank" rel="noreferrer" className={contactStyles.secondaryLink}>
             YouTube →

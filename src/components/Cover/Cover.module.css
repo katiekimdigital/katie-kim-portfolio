@@ -35,8 +35,9 @@
 
 .firstName,
 .lastName {
-  font-family: 'Instrument Serif', serif;
+  font-family: 'Spectral', Georgia, serif;
   font-style: italic;
+  font-weight: 400;
   font-size: 80px;
   color: var(--ivory);
   line-height: 1;
@@ -44,7 +45,7 @@
 }
 
 .tagline {
-  font-family: 'Special Elite', cursive;
+  font-family: 'Courier Prime', 'Courier New', monospace;
   font-size: 11px;
   color: var(--coffee-mid);
   letter-spacing: 3px;
@@ -87,21 +88,21 @@
 }
 
 .est {
-  font-family: 'Special Elite', cursive;
+  font-family: 'Courier Prime', 'Courier New', monospace;
   font-size: 13px;
   color: var(--ink-faded);
   letter-spacing: 1px;
 }
 
 .tap {
-  font-family: 'Kalam', cursive;
+  font-family: 'Spectral', Georgia, serif;
   font-style: italic;
   font-size: 14px;
   color: var(--ink-faded);
 }
 
 .openBtn {
-  font-family: 'Special Elite', cursive;
+  font-family: 'Courier Prime', 'Courier New', monospace;
   font-size: 13px;
   color: var(--ink-body);
   background: none;
@@ -115,15 +116,6 @@
 .openBtn:hover {
   background: var(--espresso);
   color: var(--ivory);
-}
-
-.cafeTag {
-  position: absolute;
-  bottom: 24px;
-  right: 24px;
-  font-family: 'Kalam', cursive;
-  font-size: 11px;
-  color: var(--coffee-mid);
 }
 
 /* Mobile: below 900px — spine horizontal, espresso top cream bottom, curtain slides up */

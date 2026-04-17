@@ -3,12 +3,16 @@ import NudgeDashboard from "../../case-studies/NudgeDashboard";
 import FlowDashboard from "../../case-studies/FlowDashboard";
 import RelayLanding from "../../case-studies/RelayLanding";
 import NamisanCaseStudy from "../../case-studies/NamisanCaseStudy";
+import CochlearCaseStudy from "../../case-studies/CochlearCaseStudy";
+import UpskilledCaseStudy from "../../case-studies/UpskilledCaseStudy";
 
 const COMPONENT_MAP = {
   NudgeDashboard,
   FlowDashboard,
   RelayLanding,
   NamisanCaseStudy,
+  CochlearCaseStudy,
+  UpskilledCaseStudy,
 };
 
 export default function CaseStudyModal({ item, onClose }) {

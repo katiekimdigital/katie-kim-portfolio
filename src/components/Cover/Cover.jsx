@@ -7,7 +7,6 @@ export default function Cover({ onOpen }) {
   const handleOpen = useCallback(() => {
     if (animating) return
     setAnimating(true)
-    // Fallback: call onOpen after 600ms regardless of animation event
     setTimeout(() => {
       onOpen()
     }, 600)
@@ -29,13 +28,12 @@ export default function Cover({ onOpen }) {
 
       <div className={`${styles.right} ${animating ? styles.fadeIn : ''}`}>
         <div className={styles.rightContent}>
-          <p className={styles.est}>— est. Sydney, 2026 —</p>
-          <p className={styles.tap}>tap anywhere to open</p>
+          <p className={styles.est}>— Sydney, Australia —</p>
+          <p className={styles.tap}>click anywhere to enter</p>
           <button className={styles.openBtn} onClick={handleOpen}>
-            Open Menu →
+            View Work →
           </button>
         </div>
-        <p className={styles.cafeTag}>a café for the mind</p>
       </div>
     </div>
   )

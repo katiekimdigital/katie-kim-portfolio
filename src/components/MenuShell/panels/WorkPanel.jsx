@@ -10,10 +10,10 @@ export default function WorkPanel() {
 
   return (
     <div className={styles.panel}>
-      <span className={styles.eyebrow}>— Today's Selection —</span>
-      <h1 className={styles.title}>The Menu</h1>
+      <span className={styles.eyebrow}>— Selected Work —</span>
+      <h1 className={styles.title}>Case Studies</h1>
       <p className={workStyles.intro}>
-        Four case studies from an AI-directed design practice. Each one illustrates a different angle of the work — strategy, systems, execution, and real-world proof.
+        Six projects from an AI-directed design practice. Each one illustrates a different angle of the work — enterprise operations, brand building, strategy, systems, and execution.
       </p>
 
       <div className={workStyles.list}>

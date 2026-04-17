@@ -27,10 +27,10 @@ const SKILL_GROUPS = [
 export default function SkillsPanel() {
   return (
     <div className={styles.panel}>
-      <span className={styles.eyebrow}>— The Ingredients —</span>
+      <span className={styles.eyebrow}>— Capabilities —</span>
       <h1 className={styles.title}>Skills</h1>
       <p className={styles.body}>
-        What I bring to the table — grouped by how I use it. Strategy directs the work, craft executes it, thinking shapes the decisions in between.
+        What I bring to the work — grouped by how I use it. Strategy directs, craft executes, thinking shapes the decisions in between.
       </p>
 
       {SKILL_GROUPS.map((group) => (

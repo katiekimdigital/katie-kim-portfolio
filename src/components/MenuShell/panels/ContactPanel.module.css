@@ -2,14 +2,13 @@
   margin-top: 64px;
   padding: 32px 40px;
   max-width: 900px;
-  background: var(--cream-light, #F7F1E3);
-  border: 1px solid var(--border, #D9CFB8);
-  border-left: 3px solid var(--matcha-deep, #3D5A2E);
+  background: var(--matcha-mist, #EBF2E8);
+  border: 1px solid rgba(61, 90, 46, 0.2);
   border-radius: 2px;
 }
 
 .ctaLabel {
-  font-family: 'Special Elite', 'JetBrains Mono', monospace;
+  font-family: 'Courier Prime', 'Courier New', monospace;
   font-size: 10px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -33,7 +32,7 @@
 }
 
 .primaryLink {
-  font-family: 'Instrument Serif', Georgia, serif;
+  font-family: 'Spectral', Georgia, serif;
   font-style: italic;
   font-size: 22px;
   color: var(--terracotta, #A65D3E);

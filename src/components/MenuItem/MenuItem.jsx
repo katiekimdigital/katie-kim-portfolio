@@ -1,15 +1,10 @@
-import { useState } from "react";
 import styles from "./MenuItem.module.css";
 
 export default function MenuItem({ item, onSelect }) {
-  const [hovered, setHovered] = useState(false);
-
   return (
     <article
       className={styles.item}
       onClick={() => onSelect(item)}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
       onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && onSelect(item)}
       role="button"
       tabIndex={0}
@@ -28,9 +23,7 @@ export default function MenuItem({ item, onSelect }) {
 
       <div className={styles.footer}>
         <span className={styles.meta}>{item.meta}</span>
-        <span className={styles.viewCta}>
-          {hovered ? "View case study →" : "Order"}
-        </span>
+        <span className={styles.viewCta}>View case study →</span>
       </div>
     </article>
   );
