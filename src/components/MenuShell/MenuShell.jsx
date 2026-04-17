@@ -14,12 +14,12 @@ const PANELS = {
   contact: ContactPanel,
 }
 
-export default function MenuShell({ activeTab, onTabChange }) {
+export default function MenuShell({ activeTab, onTabChange, onGoHome }) {
   const ActivePanel = PANELS[activeTab] || AboutPanel
 
   return (
     <div className={styles.shell}>
-      <Sidebar activeTab={activeTab} onTabChange={onTabChange} />
+      <Sidebar activeTab={activeTab} onTabChange={onTabChange} onGoHome={onGoHome} />
       <main className={styles.content}>
         <ActivePanel />
       </main>
