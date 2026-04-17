@@ -35,9 +35,9 @@
 
 .columns {
   column-count: 2;
-  column-gap: 48px;
+  column-gap: clamp(24px, 4vw, 48px);
   font-family: Georgia, serif;
-  font-size: 16px;
+  font-size: clamp(14px, 1.1vw + 10px, 16px);
   line-height: 1.65;
   color: var(--ink-soft, #3A322A);
   max-width: 900px;
@@ -84,8 +84,8 @@
 
 .gridTwo {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px 48px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(24px, 4vw, 40px) clamp(24px, 4vw, 48px);
   max-width: 900px;
   margin-top: 32px;
 }
@@ -129,5 +129,19 @@
 
   .signature {
     font-size: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: clamp(32px, 8vw, 72px);
+  }
+
+  .columns {
+    column-count: 1;
+  }
+
+  .signature {
+    font-size: 36px;
   }
 }
