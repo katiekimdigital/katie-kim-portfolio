@@ -111,3 +111,23 @@
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: clamp(36px, 8vw, 72px);
+  }
+
+  .columns {
+    column-count: 1;
+    column-gap: 0;
+  }
+
+  .gridTwo {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .signature {
+    font-size: 40px;
+  }
+}
