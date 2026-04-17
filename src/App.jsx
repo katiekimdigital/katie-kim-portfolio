@@ -30,7 +30,7 @@ export default function App() {
   return (
     <>
       {isOpen ? (
-        <MenuShell activeTab={activeTab} onTabChange={setActiveTab} />
+       <MenuShell activeTab={activeTab} onTabChange={setActiveTab} onGoHome={() => setIsOpen(false)} />
       ) : (
         <Cover onOpen={() => setIsOpen(true)} />
       )}
