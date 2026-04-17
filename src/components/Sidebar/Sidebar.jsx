@@ -8,13 +8,13 @@ const TABS = [
   { id: 'contact', label: 'Contact' },
 ]
 
-export default function Sidebar({ activeTab, onTabChange }) {
+export default function Sidebar({ activeTab, onTabChange, onGoHome }) {
   return (
     <nav className={styles.sidebar}>
       <button
         className={styles.brand}
-        onClick={() => onTabChange('about')}
-        aria-label="Go to About"
+        onClick={onGoHome}
+        aria-label="Return to cover"
       >
         <span className={styles.brandName}>KK</span>
       </button>
