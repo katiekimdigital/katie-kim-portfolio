@@ -1,46 +1,48 @@
 .item {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 24px 0;
+  gap: 8px;
+  padding: 20px 0;
   border-bottom: 1px solid var(--color-border, #e5dcc7);
   cursor: pointer;
-  transition: transform 0.25s ease, padding 0.25s ease;
+  transition: padding 0.2s cubic-bezier(0.23, 1, 0.32, 1);
   outline: none;
+  font-kerning: normal;
 }
 
 .item:hover,
 .item:focus-visible {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 .item:focus-visible {
   background: rgba(0, 0, 0, 0.02);
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .nameRow {
   display: flex;
   align-items: baseline;
-  gap: 12px;
+  gap: 10px;
   width: 100%;
 }
 
 .name {
   font-family: 'Spectral', Georgia, serif;
-  font-size: clamp(24px, 3vw, 32px);
+  font-size: clamp(18px, 2vw, 24px);
   font-weight: 400;
+  font-style: italic;
   color: var(--color-ink, #1a1714);
   margin: 0;
   letter-spacing: -0.02em;
-  line-height: 1.1;
+  line-height: 1.15;
   white-space: nowrap;
 }
 
@@ -52,31 +54,30 @@
     var(--color-ink, #1a1714) 1px,
     transparent 1.5px
   );
-  background-size: 6px 2px;
+  background-size: 5px 2px;
   background-repeat: repeat-x;
   background-position: bottom;
-  opacity: 0.35;
+  opacity: 0.25;
   align-self: flex-end;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .tag {
   font-family: 'Courier Prime', 'Courier New', monospace;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-accent, #c46b3f);
-  background: rgba(196, 107, 63, 0.08);
-  padding: 4px 8px;
-  border-radius: 4px;
+  background: rgba(196, 107, 63, 0.07);
+  padding: 3px 7px;
+  border-radius: 3px;
   white-space: nowrap;
 }
 
 .tagline {
-  font-family: 'Spectral', Georgia, serif;
-  font-style: italic;
-  font-size: 16px;
+  font-family: Georgia, serif;
+  font-size: 13px;
   font-weight: 400;
   color: var(--color-ink-soft, #3a332c);
   margin: 0;
@@ -85,37 +86,39 @@
 
 .description {
   font-family: 'Libre Franklin', system-ui, sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   color: var(--color-text-secondary, #6b6157);
   margin: 0;
-  line-height: 1.6;
-  max-width: 640px;
+  line-height: 1.55;
+  max-width: 62ch;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 .meta {
   font-family: 'Courier Prime', 'Courier New', monospace;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 400;
   color: var(--color-text-tertiary, #9c9082);
   letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
 }
 
 .viewCta {
   font-family: 'Courier Prime', 'Courier New', monospace;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--color-ink, #1a1714);
-  transition: color 0.2s ease;
+  transition: color 0.15s ease;
+  flex-shrink: 0;
 }
 
 .item:hover .viewCta,
@@ -126,7 +129,7 @@
 @media (max-width: 768px) {
   .nameRow {
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
   }
 
   .leader {
@@ -134,13 +137,13 @@
   }
 
   .name {
-    font-size: 24px;
+    font-size: 18px;
     white-space: normal;
   }
 
   .footer {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 6px;
   }
 }

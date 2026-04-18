@@ -13,7 +13,7 @@ export default function WorkPanel() {
       <span className={styles.eyebrow}>— Selected Work —</span>
       <h1 className={styles.title}>Case Studies</h1>
       <p className={workStyles.intro}>
-        Six projects from an AI-directed design practice. Each one illustrates a different angle of the work — enterprise operations, brand building, strategy, systems, and execution.
+        Eight projects across enterprise, freelance, and self-initiated work — real engagements, real brands, and concept work that demonstrates methodology.
       </p>
 
       <div className={workStyles.list}>

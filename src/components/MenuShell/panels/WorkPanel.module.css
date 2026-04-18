@@ -1,13 +1,13 @@
 .intro {
   font-family: Georgia, serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.65;
   color: var(--ink-soft, #3A322A);
-  max-width: 620px;
-  margin: 0 0 48px 0;
+  max-width: 60ch;
+  margin: 0 0 32px 0;
 }
 
 .list {
-  max-width: 900px;
+  max-width: 840px;
   border-top: 1px solid var(--border, #D9CFB8);
 }

@@ -5,6 +5,8 @@ import RelayLanding from "../../case-studies/RelayLanding";
 import NamisanCaseStudy from "../../case-studies/NamisanCaseStudy";
 import CochlearCaseStudy from "../../case-studies/CochlearCaseStudy";
 import UpskilledCaseStudy from "../../case-studies/UpskilledCaseStudy";
+import FemtechCaseStudy from "../../case-studies/FemtechCaseStudy";
+import EnvisionCaseStudy from "../../case-studies/EnvisionCaseStudy";
 
 const COMPONENT_MAP = {
   NudgeDashboard,
@@ -13,6 +15,8 @@ const COMPONENT_MAP = {
   NamisanCaseStudy,
   CochlearCaseStudy,
   UpskilledCaseStudy,
+  FemtechCaseStudy,
+  EnvisionCaseStudy,
 };
 
 export default function CaseStudyModal({ item, onClose }) {
