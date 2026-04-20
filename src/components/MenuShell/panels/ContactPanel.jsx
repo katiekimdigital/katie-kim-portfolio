@@ -36,11 +36,8 @@ export default function ContactPanel() {
           <a href="mailto:katiekimdigital@gmail.com" className={contactStyles.primaryLink}>
             katiekimdigital@gmail.com →
           </a>
-          <a href="https://contra.com/katiekimdigital" target="_blank" rel="noreferrer" className={contactStyles.secondaryLink}>
+          <a href="https://contra.com/katie_kim_8aweo6rn?referralExperimentNid=DEFAULT_REFERRAL_PROGRAM&referrerUsername=katie_kim_8aweo6rn" target="_blank" rel="noreferrer" className={contactStyles.secondaryLink}>
             Contra profile →
-          </a>
-          <a href="https://linkedin.com/in/katiekimdigital" target="_blank" rel="noreferrer" className={contactStyles.secondaryLink}>
-            LinkedIn →
           </a>
           <a href="https://youtube.com/@katiekimushi" target="_blank" rel="noreferrer" className={contactStyles.secondaryLink}>
             YouTube →
