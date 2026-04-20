@@ -7,15 +7,17 @@
   overflow: hidden;
 }
 
+/* ─── Left: the name fills the space ─── */
 .left {
-  width: 50%;
+  width: 55%;
   height: 100%;
   background: var(--espresso);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-start;
   position: relative;
   z-index: 2;
+  padding: 0 clamp(28px, 5vw, 64px) clamp(32px, 5vh, 72px);
 }
 
 .left.curtainOut {
@@ -23,56 +25,63 @@
 }
 
 .leftContent {
-  text-align: center;
+  width: 100%;
 }
 
 .name {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 0;
+  line-height: 1;
+  margin-bottom: clamp(16px, 2.5vh, 28px);
 }
 
 .firstName,
 .lastName {
   font-family: 'Spectral', Georgia, serif;
   font-style: italic;
-  font-weight: 400;
-  font-size: 80px;
+  font-weight: 500;
+  font-size: clamp(80px, 17vw, 210px);
   color: var(--ivory);
-  line-height: 1;
+  line-height: 0.92;
   display: block;
+  letter-spacing: -0.04em;
 }
 
 .tagline {
   font-family: 'Courier Prime', 'Courier New', monospace;
-  font-size: 11px;
+  font-size: 10px;
   color: var(--coffee-mid);
-  letter-spacing: 3px;
-  margin-top: 20px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
 }
 
+/* ─── Spine ─── */
 .spine {
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 55%;
   transform: translateX(-1px);
-  width: 2px;
+  width: 1px;
   height: 100%;
   background: var(--coffee-mid);
+  opacity: 0.5;
   z-index: 3;
   pointer-events: none;
 }
 
+/* ─── Right: minimal, anchored to bottom ─── */
 .right {
-  width: 50%;
+  width: 45%;
   height: 100%;
   background: var(--bg-mascarpone);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-start;
   position: relative;
   z-index: 1;
+  padding: 0 clamp(28px, 5vw, 64px) clamp(32px, 5vh, 72px);
 }
 
 .right.fadeIn {
@@ -80,53 +89,59 @@
 }
 
 .rightContent {
-  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 16px;
+  align-items: flex-start;
+  gap: 14px;
 }
 
 .est {
   font-family: 'Courier Prime', 'Courier New', monospace;
-  font-size: 13px;
+  font-size: 11px;
   color: var(--ink-faded);
-  letter-spacing: 1px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .tap {
-  font-family: 'Spectral', Georgia, serif;
+  font-family: 'Alegreya', Georgia, serif;
   font-style: italic;
-  font-size: 14px;
+  font-size: 15px;
   color: var(--ink-faded);
+  line-height: 1.4;
+  max-width: 22ch;
 }
 
 .openBtn {
   font-family: 'Courier Prime', 'Courier New', monospace;
-  font-size: 13px;
+  font-size: 11px;
+  font-weight: 700;
   color: var(--ink-body);
   background: none;
   border: 1px solid var(--coffee-mid);
-  padding: 10px 24px;
+  padding: 10px 20px;
   cursor: pointer;
-  letter-spacing: 1px;
-  transition: background 200ms ease, color 200ms ease;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background 220ms var(--ease-snappy), color 220ms var(--ease-snappy);
+  margin-top: 4px;
 }
 
 .openBtn:hover {
   background: var(--espresso);
   color: var(--ivory);
+  border-color: var(--espresso);
 }
 
-/* Mobile: below 900px — spine horizontal, espresso top cream bottom, curtain slides up */
+/* ─── Mobile ─── */
 @media (max-width: 900px) {
-  .cover {
-    flex-direction: column;
-  }
+  .cover { flex-direction: column; }
 
   .left {
     width: 100%;
-    height: 50%;
+    height: 55%;
+    align-items: flex-end;
+    padding-bottom: clamp(24px, 4vh, 48px);
   }
 
   .left.curtainOut {
@@ -135,26 +150,28 @@
 
   .spine {
     left: 0;
-    top: 50%;
+    top: 55%;
     transform: translateY(-1px);
     width: 100%;
-    height: 2px;
+    height: 1px;
   }
 
   .right {
     width: 100%;
-    height: 50%;
+    height: 45%;
+    padding-top: clamp(20px, 3vh, 36px);
+    align-items: flex-start;
   }
 
   .firstName,
   .lastName {
-    font-size: 60px;
+    font-size: clamp(64px, 14vw, 120px);
   }
 }
 
 @media (max-width: 600px) {
   .firstName,
   .lastName {
-    font-size: 48px;
+    font-size: clamp(52px, 13vw, 90px);
   }
 }

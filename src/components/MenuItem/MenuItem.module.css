@@ -1,24 +1,26 @@
 .item {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 20px 0;
-  border-bottom: 1px solid var(--color-border, #e5dcc7);
+  gap: 7px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(90, 58, 24, 0.15);
   cursor: pointer;
-  transition: padding 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: background 0.18s ease, padding 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   outline: none;
+  border-radius: 2px;
   font-kerning: normal;
 }
 
 .item:hover,
 .item:focus-visible {
-  padding-left: 14px;
-  padding-right: 14px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background: rgba(184, 66, 40, 0.04);
 }
 
 .item:focus-visible {
-  background: rgba(0, 0, 0, 0.02);
-  border-radius: 4px;
+  outline: 2px solid var(--terracotta, #B84228);
+  outline-offset: 2px;
 }
 
 .header {
@@ -34,64 +36,70 @@
   width: 100%;
 }
 
+/* The name is the key identity element — give it real presence */
 .name {
   font-family: 'Spectral', Georgia, serif;
-  font-size: clamp(18px, 2vw, 24px);
-  font-weight: 400;
+  font-size: clamp(20px, 2.2vw, 27px);
+  font-weight: 500;
   font-style: italic;
-  color: var(--color-ink, #1a1714);
+  color: var(--espresso, #150900);
   margin: 0;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
   white-space: nowrap;
 }
 
+/* Dotted leader — a genuine typographic detail */
 .leader {
   flex: 1;
   height: 1px;
   background-image: radial-gradient(
     circle,
-    var(--color-ink, #1a1714) 1px,
+    rgba(90, 58, 24, 0.4) 1px,
     transparent 1.5px
   );
   background-size: 5px 2px;
   background-repeat: repeat-x;
   background-position: bottom;
-  opacity: 0.25;
   align-self: flex-end;
   margin-bottom: 6px;
 }
 
+/* Tag badge */
 .tag {
   font-family: 'Courier Prime', 'Courier New', monospace;
   font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-accent, #c46b3f);
-  background: rgba(196, 107, 63, 0.07);
+  color: var(--terracotta, #B84228);
+  background: rgba(184, 66, 40, 0.07);
   padding: 3px 7px;
-  border-radius: 3px;
+  border-radius: 2px;
   white-space: nowrap;
 }
 
+/* Tagline — italic, secondary */
 .tagline {
-  font-family: Georgia, serif;
-  font-size: 13px;
+  font-family: 'Alegreya', Georgia, serif;
+  font-style: italic;
+  font-size: 14px;
   font-weight: 400;
-  color: var(--color-ink-soft, #3a332c);
+  color: var(--ink-faded, #7A5230);
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
+/* Description — smallest body text */
 .description {
-  font-family: 'Libre Franklin', system-ui, sans-serif;
+  font-family: 'Alegreya', Georgia, serif;
   font-size: 13px;
   font-weight: 400;
-  color: var(--color-text-secondary, #6b6157);
+  color: var(--ink-body, #5A3A18);
+  opacity: 0.8;
   margin: 0;
   line-height: 1.55;
-  max-width: 62ch;
+  max-width: 60ch;
 }
 
 .footer {
@@ -104,8 +112,7 @@
 .meta {
   font-family: 'Courier Prime', 'Courier New', monospace;
   font-size: 10px;
-  font-weight: 400;
-  color: var(--color-text-tertiary, #9c9082);
+  color: rgba(90, 58, 24, 0.5);
   letter-spacing: 0.02em;
   font-variant-numeric: tabular-nums;
 }
@@ -115,35 +122,20 @@
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-ink, #1a1714);
+  letter-spacing: 0.1em;
+  color: rgba(90, 58, 24, 0.4);
   transition: color 0.15s ease;
   flex-shrink: 0;
 }
 
 .item:hover .viewCta,
 .item:focus-visible .viewCta {
-  color: var(--color-accent, #c46b3f);
+  color: var(--terracotta, #B84228);
 }
 
 @media (max-width: 768px) {
-  .nameRow {
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .leader {
-    display: none;
-  }
-
-  .name {
-    font-size: 18px;
-    white-space: normal;
-  }
-
-  .footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
+  .nameRow { flex-wrap: wrap; gap: 6px; }
+  .leader  { display: none; }
+  .name    { font-size: 20px; white-space: normal; }
+  .footer  { flex-direction: column; align-items: flex-start; gap: 5px; }
 }

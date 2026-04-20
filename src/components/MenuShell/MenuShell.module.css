@@ -1,15 +1,15 @@
 .shell {
   display: grid;
-  grid-template-columns: clamp(140px, 15vw, 200px) 1fr;
+  grid-template-columns: clamp(148px, 14vw, 196px) 1fr;
   min-height: 100vh;
   min-height: 100dvh;
-  background: #EFE7D6;
+  background: var(--bg-mascarpone, #EAE0C6);
   color: #1F1A14;
   overflow: hidden;
 }
 
 .content {
-  padding: clamp(24px, 5vw, 80px) clamp(16px, 4vw, 72px);
+  padding: clamp(28px, 5vw, 72px) clamp(20px, 4vw, 68px);
   overflow-y: auto;
   overflow-x: hidden;
   max-height: 100vh;

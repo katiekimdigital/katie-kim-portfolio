@@ -1,15 +1,18 @@
 /*
- * Panel.module.css — shared typographic system for all panels
- * Type scale: 5 steps, ratio ~1.33 (perfect fourth)
- *   xs  11px — labels, eyebrows
- *   sm  13px — captions, metadata
- *   base 15px — body copy
- *   lg  20px — item titles, subheads
- *   xl  44px — panel titles (fluid)
+ * Panel.module.css — shared typographic system
+ *
+ * Type scale (perfect fourth, ×1.333):
+ *   10px  — eyebrows, labels (Courier Prime)
+ *   14px  — body copy (Alegreya)
+ *   19px  — item titles (Spectral italic)
+ *   60px  — panel display title (Spectral italic 500)
+ *
+ * Hierarchy lives in the SIZE JUMP between 10px labels and 60px titles.
+ * Everything else is secondary.
  */
 
 .panel {
-  animation: panelFade 0.35s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation: panelFade 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   font-kerning: normal;
 }
 
@@ -17,88 +20,90 @@
 .eyebrow {
   font-family: 'Courier Prime', 'Courier New', monospace;
   font-size: 10px;
-  letter-spacing: 0.1em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--terracotta, #A65D3E);
-  margin-bottom: 12px;
-  display: inline-block;
+  color: var(--terracotta, #B84228);
+  margin-bottom: 10px;
+  display: block;
   line-height: 1;
 }
 
-/* ─── Panel title ─── */
+/* ─── Panel display title ─── */
 .title {
   font-family: 'Spectral', Georgia, serif;
-  font-size: clamp(28px, 3.5vw, 48px);
-  font-weight: 400;
+  font-size: clamp(32px, 4.5vw, 60px);
+  font-weight: 500;
   font-style: italic;
-  line-height: 1.05;
-  letter-spacing: -0.025em;
-  color: var(--ink, #1F1A14);
-  margin: 0 0 32px 0;
+  line-height: 0.97;
+  letter-spacing: -0.03em;
+  color: var(--espresso, #150900);
+  margin: 0 0 36px 0;
 }
 
 /* ─── Drop cap ─── */
 .dropCap {
   float: left;
   font-family: 'Spectral', Georgia, serif;
-  font-size: 60px;
-  line-height: 0.82;
-  padding: 6px 10px 0 0;
-  color: var(--matcha-deep, #3D5A2E);
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 0.78;
+  padding: 8px 12px 0 0;
+  color: var(--terracotta, #B84228);
   font-style: italic;
 }
 
-/* ─── Two-column editorial body ─── */
+/* ─── Two-column editorial body (About) ─── */
 .columns {
   column-count: 2;
-  column-gap: clamp(24px, 3.5vw, 40px);
-  font-family: Georgia, serif;
-  font-size: 14px;
-  line-height: 1.7;
-  color: var(--ink-soft, #3A322A);
-  max-width: 840px;
+  column-gap: clamp(24px, 3.5vw, 44px);
+  font-family: 'Alegreya', Georgia, serif;
+  font-size: 15px;
+  line-height: 1.68;
+  color: var(--ink-body, #5A3A18);
+  max-width: 860px;
 }
 
 .columns p {
-  margin: 0 0 16px 0;
+  margin: 0 0 15px 0;
   break-inside: avoid-column;
 }
 
 /* ─── Signature ─── */
 .signature {
   font-family: 'Caveat', cursive;
-  font-size: 40px;
-  font-weight: 600;
-  color: var(--terracotta, #A65D3E);
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--terracotta, #B84228);
   text-align: right;
-  margin-top: 24px;
-  max-width: 840px;
+  margin-top: 20px;
+  max-width: 860px;
   line-height: 1;
   transform: rotate(-2deg);
   transform-origin: right center;
+  display: block;
 }
 
 /* ─── Single-column body copy ─── */
 .body {
-  font-family: Georgia, serif;
+  font-family: 'Alegreya', Georgia, serif;
   font-size: 15px;
   line-height: 1.65;
-  color: var(--ink-soft, #3A322A);
-  max-width: 65ch;
+  color: var(--ink-body, #5A3A18);
+  max-width: 62ch;
 }
 
-.body p {
-  margin: 0 0 16px 0;
-}
+.body p { margin: 0 0 15px 0; }
 
-/* ─── Section label (overline above grid sections) ─── */
+/* ─── Section label ─── */
 .sectionLabel {
   font-family: 'Courier Prime', 'Courier New', monospace;
   font-size: 10px;
-  letter-spacing: 0.1em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--terracotta, #A65D3E);
-  margin: 0 0 8px 0;
+  color: var(--terracotta, #B84228);
+  margin: 0 0 6px 0;
   display: block;
 }
 
@@ -106,67 +111,49 @@
 .gridTwo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: clamp(20px, 3vw, 32px) clamp(24px, 3.5vw, 40px);
-  max-width: 840px;
+  gap: clamp(20px, 2.5vw, 32px) clamp(24px, 3.5vw, 44px);
+  max-width: 860px;
   margin-top: 20px;
 }
 
 /* ─── Grid item title ─── */
 .itemTitle {
   font-family: 'Spectral', Georgia, serif;
-  font-size: 19px;
+  font-size: 20px;
   font-style: italic;
-  font-weight: 400;
-  color: var(--ink, #1F1A14);
+  font-weight: 500;
+  color: var(--espresso, #150900);
   margin: 0 0 6px 0;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 /* ─── Grid item body ─── */
 .itemDesc {
-  font-family: Georgia, serif;
-  font-size: 13px;
+  font-family: 'Alegreya', Georgia, serif;
+  font-size: 14px;
   line-height: 1.6;
-  color: var(--ink-soft, #3A322A);
+  color: var(--ink-body, #5A3A18);
   margin: 0;
-  max-width: 52ch;
+  max-width: 48ch;
 }
 
 /* ─── Animation ─── */
 @keyframes panelFade {
-  from { opacity: 0; transform: translateY(6px); }
+  from { opacity: 0; transform: translateY(5px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ─── Responsive ─── */
 @media (max-width: 900px) {
-  .title {
-    font-size: clamp(26px, 5vw, 40px);
-  }
+  .title { font-size: clamp(28px, 5.5vw, 48px); }
 }
 
 @media (max-width: 768px) {
-  .columns {
-    column-count: 1;
-    column-gap: 0;
-  }
-
-  .gridTwo {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .signature {
-    font-size: 32px;
-  }
+  .columns { column-count: 1; }
+  .gridTwo { grid-template-columns: 1fr; gap: 24px; }
+  .signature { font-size: 36px; }
 }
 
 @media (max-width: 600px) {
-  .title {
-    font-size: clamp(24px, 6vw, 36px);
-  }
-
-  .signature {
-    font-size: 28px;
-  }
+  .title { font-size: clamp(26px, 7vw, 40px); }
+  .signature { font-size: 30px; }
 }

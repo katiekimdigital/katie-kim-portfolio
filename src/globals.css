@@ -1,21 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Caveat:wght@400;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Caveat:wght@400;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg-mascarpone: #F2EAD8;
-  --bg-cream: #E8D9BE;
-  --bg-polaroid: #F5EFE0;
-  --coffee-mid: #C4A882;
-  --ink-body: #5C3D1E;
-  --ink-faded: #7A5230;
-  --espresso: #2A1608;
-  --ivory: #F0E6CC;
-  --matcha-mist: #EBF2E8;
-  --matcha-mid: #4A7C59;
-  --matcha-light: #8DB87A;
-  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
-  --dur-curtain: 600ms;
-  --dur-panel: 300ms;
-  --dur-panel-out: 150ms;
+  /* Surfaces */
+  --bg-mascarpone: #EAE0C6;
+  --bg-cream: #E4D6B8;
+  --bg-polaroid: #F2EBD8;
+
+  /* Ink */
+  --espresso:    #150900;
+  --ivory:       #F0E8D0;
+  --coffee-mid:  #B8966A;
+  --ink-body:    #5A3A18;
+  --ink-faded:   #7A5230;
+
+  /* Accents */
+  --terracotta:  #B84228;
+  --matcha-mist: #E8F0E4;
+  --matcha-mid:  #3E6E4C;
+  --matcha-light:#7AAA6A;
+
+  /* Motion */
+  --ease-out:      cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-snappy:   cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-curtain:   650ms;
+  --dur-panel:     320ms;
+  --dur-panel-out: 160ms;
 }
 
 *,
@@ -33,6 +42,7 @@ html, body {
   height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-kerning: normal;
 }
 
 #root {
@@ -51,7 +61,7 @@ html, body {
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(12px); }
+  from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
