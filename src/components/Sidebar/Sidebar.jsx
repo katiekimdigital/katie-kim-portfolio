@@ -30,6 +30,16 @@ export default function Sidebar({ activeTab, onTabChange, onGoHome }) {
             </button>
           </li>
         ))}
+        <li>
+          <a
+            href="https://kk-components-showcase.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${styles.tab} ${styles.lab}`}
+          >
+            Lab ↗
+          </a>
+        </li>
       </ul>
     </nav>
   )
